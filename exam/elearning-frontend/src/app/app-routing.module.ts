@@ -16,10 +16,12 @@ import { ClassesFormComponent } from './classes-form/classes-form.component';
    
   ],
   imports: [
+    RouterModule.forRoot(routes),
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes) // Configurez les routes
   ],
+  exports: [RouterModule],
   providers: [],
 })
 export class AppModule { }

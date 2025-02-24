@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Student } from '../models/student.model';
 
 @Injectable({
-  providedIn: 'root' // Assurez-vous que le service est fourni au niveau racine
+  providedIn: 'root'  // Assurez-vous qu'il est bien fourni au niveau de l'application
 })
 export class StudentService {
   private apiUrl = 'http://localhost:8080/api/students';
