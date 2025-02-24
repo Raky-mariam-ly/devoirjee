@@ -1,0 +1,28 @@
+<h2>Créer une Inscription</h2>
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="date">Date :</label>
+    <input type="date" id="date" formControlName="date">
+  </div>
+  <div>
+    <label for="description">Description :</label>
+    <input type="text" id="description" formControlName="description">
+  </div>
+  <div>
+    <label for="studentId">Étudiant :</label>
+    <select id="studentId" formControlName="studentId">
+      <option *ngFor="let student of students" [value]="student.id">
+        {{ student.firstName }} {{ student.lastName }}
+      </option>
+    </select>
+  </div>
+  <div>
+    <label for="classesId">Classe :</label>
+    <select id="classesId" formControlName="classesId">
+      <option *ngFor="let classe of classes" [value]="classe.id">
+        {{ classe.name }}
+      </option>
+    </select>
+  </div>
+  <button type="submit" [disabled]="registrationForm.invalid">Créer</button>
+</form>

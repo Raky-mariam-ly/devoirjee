@@ -1,0 +1,21 @@
+<h2>Liste des Étudiants</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>Email Pro</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{ student.id }}</td>
+      <td>{{ student.firstName }} {{ student.lastName }}</td>
+      <td>{{ student.emailPro }}</td>
+      <td>
+        <button (click)="deleteStudent(student.id)">Supprimer</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

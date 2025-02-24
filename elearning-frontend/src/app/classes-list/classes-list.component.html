@@ -1,0 +1,21 @@
+<h2>Liste des Classes</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let classe of classes">
+      <td>{{ classe.id }}</td>
+      <td>{{ classe.name }}</td>
+      <td>{{ classe.description }}</td>
+      <td>
+        <button (click)="deleteClasses(classe.id)">Supprimer</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

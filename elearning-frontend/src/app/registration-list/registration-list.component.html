@@ -1,0 +1,25 @@
+<h2>Liste des Inscriptions</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Étudiant</th>
+      <th>Classe</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let registration of registrations">
+      <td>{{ registration.id }}</td>
+      <td>{{ registration.date | date }}</td>
+      <td>{{ registration.description }}</td>
+      <td>{{ registration.student.firstName }} {{ registration.student.lastName }}</td>
+      <td>{{ registration.classes.name }}</td>
+      <td>
+        <button (click)="deleteRegistration(registration.id)">Supprimer</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
